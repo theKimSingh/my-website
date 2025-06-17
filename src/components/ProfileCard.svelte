@@ -79,13 +79,12 @@
     margin-top: 15px;
     width: 100%;
     max-width: 200px;
-    display: flex;
+    display: block;
     justify-content: center;
   }
 
   .signature-line {
     width: 100%;
-    height: auto;
     overflow: visible;
     fill: none;
   }

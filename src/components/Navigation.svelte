@@ -2,7 +2,7 @@
   <ul>
     <li><a href="work">work</a></li>
     <li><a href="projects">projects</a></li>
-    <li><a href="#resume">resume</a></li>
+    <!-- <li><a href="#resume">resume</a></li> -->
   </ul>
 </nav>
 
@@ -10,7 +10,6 @@
   .main-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
