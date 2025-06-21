@@ -2,7 +2,7 @@
   import ProfileCard from '../components/ProfileCard.svelte';
   import Navigation from '../components/Navigation.svelte';
   import SocialLinks from '../components/SocialLinks.svelte';
-
+  import WorkCard from '../components/WorkCard.svelte'; 
   const profileImage = 'logo-placeholder.jpg';
 </script>
 

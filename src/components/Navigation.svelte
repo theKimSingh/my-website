@@ -31,7 +31,7 @@
     bottom: -5px;
     left: 0;
     background-color: var(--accent-color);
-    transition: width 0.3s ease-out;
+    transition: width 0.2s ease-out;
   }
 
   .main-nav li a:hover::after {
