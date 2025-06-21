@@ -25,10 +25,11 @@
     transform: scale(1);
   }
   .social-links a:hover svg {
-    fill: var(--accent-color);
-    stroke: var(--text-light);
-    transform: scale(1.2);
-    transition: 0.2s ease-in-out;
+    stroke: var(--icon-accent);
+    transform: scale(1.3);
+    transition:
+      transform 0.2s ease-in-out,
+      stroke 0.2s ease-out;
   }
 
   .social-links a svg {

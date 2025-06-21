@@ -4,33 +4,32 @@
 </script>
 
 <section class="work-experience">
-  <h2>
+  <div class="header">
     <button
-      type="button"
-      aria-label="Go back"
-      on:click={() => window.history.back()}
-      class="back-button"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-arrow-left"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-      </svg>
-    </button>
-  {title}
-  </h2>
+        type="button"
+        aria-label="Go back"
+        on:click={() => window.history.back()}
+        class="back-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-left"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+    <h2>{title}</h2>
+  </div>
   <div class="experience-list">
     {#each experiences as exp}
       <div class="experience-item">
@@ -56,6 +55,36 @@
 </section>
 
 <style>
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .work-experience h2 {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+  }
+
+  .work-experience h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(.4,1,.4,1);
+  }
+
+  .work-experience h2:hover::after  {
+    transform: scaleX(1);
+  }
 
   .back-button {
     all: unset;
@@ -73,10 +102,11 @@
   }
 
   .back-button svg:hover {
-    color: var(--accent-color);
-    transform: scale(1.1);
-    transition: 0.2s ease-in-out;
-    stroke: white;
+    color: var(--icon-accent);
+    transform: scale(1.2);
+    transition:
+      transform 0.2s ease-in-out,
+      color 0.5s ease-out;
   }
 
 
@@ -103,17 +133,19 @@
   .experience-item {
     display: flex;
     align-items: flex-start;
-    /* background-color: #1a1a1a; */
     background-color: #2b333b;
-    border-bottom: 3px solid var(--accent-color);
     padding: 20px;
     border-radius: 8px;
+    border-bottom: 2px solid #2b333b;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
+    transition:
+      transform 0.2s ease-in-out,
+      border-bottom-color 0.2s ease-out;
   }
 
   .experience-item:hover {
     transform: translateY(-5px);
+    border-bottom-color: var(--accent-color);
   }
 
   .logo-container {

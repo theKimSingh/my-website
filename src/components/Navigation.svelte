@@ -39,12 +39,12 @@
   }
 
   .main-nav li a:hover {
-    color: var(--text-light); /* Make text brighter on hover */
+    color: var(--text-light);
   }
 
   @media (max-width: 768px) {
     .main-nav ul {
-      justify-content: center; /* Center links on smaller screens */
+      justify-content: center;
     }
   }
 </style>
