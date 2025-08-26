@@ -1,7 +1,7 @@
 <nav class="main-nav">
   <ul>
     <li><a href="work">work</a></li>
-    <li><a href="projects">projects</a></li>
+    <!-- <li><a href="projects">projects</a></li> -->
     <!-- <li><a href="#resume">resume</a></li> -->
   </ul>
 </nav>
